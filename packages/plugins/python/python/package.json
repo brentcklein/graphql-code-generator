@@ -1,0 +1,38 @@
+{
+  "name": "@graphql-codegen/python",
+  "version": "0.1.0",
+  "description": "GraphQL Code Generator plugin for creating python type hints",
+  "repository": "git@github.com:dotansimha/graphql-code-generator.git",
+  "license": "MIT",
+  "scripts": {
+    "lint": "tslint src/**/*.ts",
+    "prepack": "bob-update-version",
+    "build": "bob"
+  },
+  "dependencies": {
+    "@graphql-codegen/plugin-helpers": "1.12.1",
+    "@graphql-codegen/visitor-plugin-common": "^1.12.1",
+    "snake-case-typescript": "^0.0.2",
+    "tslib": "1.10.0"
+  },
+  "peerDependencies": {
+    "graphql": "^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0"
+  },
+  "devDependencies": {
+    "@ardatan/bob": "0.2.7",
+    "typescript": "3.7.5"
+  },
+  "sideEffects": false,
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "typings": "dist/index.d.ts",
+  "typescript": {
+    "definition": "dist/index.d.ts"
+  },
+  "buildOptions": {
+    "input": "./src/index.ts"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
